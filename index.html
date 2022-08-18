@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-up Form</title>
+</head>
+<body>
+
+  <div class="main container">
+
+    <div class="left background">
+      <div class="banner">
+        <img src="./assets/images/odin-lined.png">
+        <h1>ODIN</h1>
+      </div>
+      <p>Photo by Nicolas Cool on <a href="unsplash.com">Unsplash</a></p>
+      
+    </div>
+
+    <div class="right background">
+      <div class="header">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your depest dreams. Sign up <em>now</em> to get started.</p>
+      <p>You <em>know</em> you want to.</p>
+      </div>
+      <form action="http://httpbin.org/post" method="post">
+        <fieldset>
+          <p>Let's do this!</p>
+
+          <div class="container">
+
+          <div class="left">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="right">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+          </div>
+        </div>
+        </fieldset>
+
+        <button type="submit">Create Account</button>
+      </form>
+
+      <p class="footer">Already have an account? <a>Log in</a></p>
+    </div>
+  </div>
+  
+</body>
+</html>
