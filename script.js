@@ -9,6 +9,8 @@ confirmpwd.addEventListener('focus', hide);
 
 function hide() {
   error.classList.add('hide');
+  password.classList.remove('error');
+  confirmpwd.classList.remove('error');
 }
 
 password.addEventListener('change', validate);
@@ -19,6 +21,8 @@ function validate(e) {
   if (password.value != '' && confirmpwd.value != '') {
     if (password.value != confirmpwd.value) {
       error.classList.remove('hide');
+      password.classList.add('error');
+      confirmpwd.classList.add('error');
       e.preventDefault();
     }
   }
