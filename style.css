@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: sans-serif
+  font-family: sans-serif;
 }
 
 h1 {
@@ -36,8 +36,9 @@ h1 {
   justify-content: center;
 }
 
-.right {
-  padding: 10px;
+.header, .normal {
+  padding-left: 25px;
+  padding-right: 75px;
 }
 
 .left.background {
@@ -48,20 +49,43 @@ h1 {
 
 body > * {
   background-color: rgba(0, 0, 0, 0.05);
+  color:rgb(102, 120, 122);
 }
-
 
 form {
   width: 100%;
-  background-color: white;
   border: none;
-  padding: 10px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 fieldset {
-  border: none;
+  width: 100%;
+  background-color: white;
+  border-left: none;
+  border-right: none;
+  border-top: rgba(121, 169, 175, 0.2) solid 1px;
+  border-bottom:rgba(121, 169, 175, 0.3) solid 1px;
+  box-shadow: 0 3px 3px rgba(121, 169, 175, 0.2);
+  padding: 25px;
+  padding-right: 75px;
+  box-sizing: border-box;
+}
+
+input, input:focus {
+  padding: 5px 10px;
+  margin: 0px 10px 5px 0px;
+}
+
+label {
+  margin-top: 5px;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+a#login {
+  color: rgb(121, 169, 175);
+  font-weight: bold;
 }
 
 a {
@@ -91,9 +115,39 @@ img {
   font-size: small;
 }
 
-p:not(.footer) {
+p:not(.normal) {
   font-size: large;
   font-weight: bold;
 }
 
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  background-color: rgba(121, 169, 175, 0.7);
+}
 
+form > button {
+  margin: 25px 25px 0px;
+}
+
+input:focus {
+  outline: none !important;
+  border: solid 1px rgb(117, 142, 145);
+  box-shadow: 2px 2px 2px rgba(102, 120, 122, 0.3);
+  transform: scale(1.02);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#pwd-error {
+  font-size: x-small;
+  color: red;
+  margin-top: 1px;
+  font-weight: 200;
+}
